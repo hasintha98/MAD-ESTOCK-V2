@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this, "clothing Clicked", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this, ProductListPage.class));
+                startActivity(new Intent(MainActivity.this, Cart.class));
             }
         });
 
@@ -119,6 +119,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this, "SearchBlueBtn Clicked", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, SignUpPage.class));
             }
         });
 
@@ -126,6 +127,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this, "UserAccountBlueBtn Clicked", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, SignInPage.class));
             }
         });
 
