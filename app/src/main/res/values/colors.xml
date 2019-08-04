@@ -5,4 +5,6 @@
     <color name="colorAccent">#D81B60</color>
     <color name="paymentDone">#18d955</color>
     <color name="paymentCancel">#d11717</color>
+    <color name="downBar">#F5F5F5</color>
+    <color name="productCart">#1ecc16</color>
 </resources>
