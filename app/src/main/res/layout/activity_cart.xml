@@ -204,7 +204,7 @@
             android:layout_marginBottom="11dp"
             android:background="#E91E63"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/constraintLayout18"
+            app:layout_constraintEnd_toStartOf="@+id/Layout_checkout"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -229,7 +229,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout18"
+            android:id="@+id/Layout_checkout"
             android:layout_width="173dp"
             android:layout_height="68dp"
             android:layout_marginTop="10dp"

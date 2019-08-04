@@ -27,4 +27,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:+'
     androidTestImplementation 'androidx.test.espresso:espresso-core:+'
+    implementation 'com.weiwangcn.betterspinner:library-material:1.1.0'
+
 }
