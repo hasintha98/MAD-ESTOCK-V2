@@ -7,7 +7,7 @@
     tools:context=".HomePage">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
+        android:id="@+id/Layout_signin_header"
         android:layout_width="414dp"
         android:layout_height="96dp"
         android:background="@color/colorPrimary"
@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.05">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/Text_signin"
             android:layout_width="152dp"
             android:layout_height="73dp"
             android:layout_marginStart="8dp"
@@ -70,17 +70,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="39dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/home_blue" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout9"
         android:layout_width="376dp"
@@ -91,7 +80,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.37"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/Layout_signin_header">
 
         <TextView
             android:id="@+id/textView11"
@@ -108,7 +97,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/Input_uname"
             android:layout_width="203dp"
             android:layout_height="33dp"
             android:layout_marginStart="8dp"
