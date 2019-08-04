@@ -20,37 +20,15 @@
 
     <!-- HomePage -->
     <string name="Input_searchbar">search...</string>
-    <string name="Layout_mobilephones"></string>
-    <string name="Text_mobilephones"></string>
-    <string name="Circle_mobilephones"></string>
-    <string name="Layout_clothing"></string>
-    <string name="Circle_clothing"></string>
-    <string name="Text_clothing"></string>
-    <string name="Layout_cosmetics"></string>
-    <string name="Circle_cosmetics"></string>
-    <string name="Text_cosmetics"></string>
-    <string name="Layout_electronics"></string>
-    <string name="Circle_Electronics"></string>
-    <string name="Text_Electronics"></string>
-    <string name="Layout_Furniture"></string>
-    <string name="Circle_furniture"></string>
-    <string name="Text_furniture"></string>
-    <string name="Layout_others"></string>
-    <string name="Circle_others"></string>
-    <string name="Text_others"></string>
-
-    <string name="Layout_downbar"></string>
-    <string name="Layout_home_icon"></string>
-    <string name="Icon_home_blue"></string>
-    <string name="Text_home_icon"></string>
-
-    <string name="Layout_search_icon"></string>
-    <string name="Icon_search_blue"></string>
-    <string name="Text_search_blue"></string>
-
-    <string name="Layout_useraccount_icon"></string>
-    <string name="Icon_useraccount_blue"></string>
-    <string name="Text_useraccount_blue"></string>
+    <string name="Text_mobilephones">Mobile Phones</string>
+    <string name="Text_clothing">Clothing</string>
+    <string name="Text_cosmetics">Cosmetics</string>
+    <string name="Text_Electronics">Electronics</string>
+    <string name="Text_furniture">Furniture</string>
+    <string name="Text_others">Others</string>
+    <string name="Text_home_icon">Home</string>
+    <string name="Text_search_blue">Search</string>
+    <string name="Text_useraccount_blue">User Account</string>
 
     <!-- ProductListPage -->
     <string name="layout_iphoneX"></string>
@@ -59,9 +37,34 @@
     <string name="Text_iphoneX_price"></string>
 
 
+    <!-- SignUpPage -->
+    <string name="Text_signup">SIGN UP</string>
+    <string name="Text_namesignup">Name</string>
+    <string name="Input_namesignup"></string>
+    <string name="Text_email">Email</string>
+    <string name="Input_email"></string>
+    <string name="Text_pw">Password</string>
+    <string name="Input_pw"></string>
+    <string name="Text_con_pw">Confirm Password</string>
+    <string name="Input_con_pw"></string>
+    <string name="Text_signupbtn">Sign up</string>
 
+    <!--SignInPage-->
+    <string name="Text_signin">SIGN IN</string>
+    <string name="Text_name">Name</string>
+    <string name="Input_uname"></string>
+    <string name="Text_password">Password</string>
+    <string name="Input_password"></string>
+    <string name="Text_signinbtn">Sign in</string>
 
-
-
+    <!--Cart-->
+    <string name="Text_mycart">Text_mycart</string>
+    <string name="Text_description">Philips HP8141/00 Dryer (Pink)</string>
+    <string name="Text_price">Rs.1500</string>
+    <string name="Text_num">1</string>
+    <string name="Text_totprice">Total Price(1 item)</string>
+    <string name="Text_total">Rs.1500</string>
+    <string name="Text_shopping">Continue Shopping</string>
+    <string name="Text_checkout">Checkout</string>
 
 </resources>
