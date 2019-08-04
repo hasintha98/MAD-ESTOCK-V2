@@ -35,16 +35,16 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        imageView2 = (ImageView) findViewById(R.id.imageView2);
-        ClothingBtn = (ImageView) findViewById(R.id.ClothingBtn);
+        imageView2 = (ImageView) findViewById(R.id.Circle_mobilephones);
+        ClothingBtn = (ImageView) findViewById(R.id.Circle_clothing);
         mobileConstraint = (ConstraintLayout) findViewById(R.id.mobileConstraint) ;
-        CosmeticsBtn = (ImageView) findViewById(R.id.CosmeticsBtn);
-        ElecBtn = (ImageView) findViewById(R.id.ElecBtn);
-        FurnitureBtn = (ImageView) findViewById(R.id.FurnitureBtn);
-        OtherBtn = (ImageView) findViewById(R.id.OtherBtn);
-        UserAccountBlueBtn = (ImageView) findViewById(R.id.UserAccountBlueBtn);
-        SearchBlueBtn = (ImageView) findViewById(R.id.SearchBlueBtn);
-        HomeBlueBtn = (ImageView) findViewById(R.id.HomeBlueBtn);
+        CosmeticsBtn = (ImageView) findViewById(R.id.Circle_cosmetics);
+        ElecBtn = (ImageView) findViewById(R.id.Circle_Electronics);
+        FurnitureBtn = (ImageView) findViewById(R.id.Circle_furniture);
+        OtherBtn = (ImageView) findViewById(R.id.Circle_others);
+        UserAccountBlueBtn = (ImageView) findViewById(R.id.Icon_useraccount_blue);
+        SearchBlueBtn = (ImageView) findViewById(R.id.Icon_search_blue);
+        HomeBlueBtn = (ImageView) findViewById(R.id.Icon_home_blue);
 
         mobileConstraint.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -8,6 +8,7 @@
     android:layout_height="match_parent">
 
     <androidx.appcompat.widget.SearchView
+        android:id="@+id/Input_searchbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -15,6 +16,7 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Circle_mobilephones"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="8dp"
@@ -33,7 +35,7 @@
 
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/Circle_mobilephones"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
@@ -59,9 +61,7 @@
             android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-
+            app:layout_constraintTop_toBottomOf="@+id/Circle_mobilephones" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -85,7 +85,7 @@
 
 
         <ImageView
-            android:id="@+id/ClothingBtn"
+            android:id="@+id/Circle_clothing"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
@@ -111,7 +111,7 @@
             android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ClothingBtn" />
+            app:layout_constraintTop_toBottomOf="@+id/Circle_clothing" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -135,7 +135,7 @@
 
 
         <ImageView
-            android:id="@+id/CosmeticsBtn"
+            android:id="@+id/Circle_cosmetics"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
@@ -161,7 +161,7 @@
             android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/CosmeticsBtn" />
+            app:layout_constraintTop_toBottomOf="@+id/Circle_cosmetics" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -185,7 +185,7 @@
 
 
         <ImageView
-            android:id="@+id/ElecBtn"
+            android:id="@+id/Circle_Electronics"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
@@ -211,7 +211,7 @@
             android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ElecBtn" />
+            app:layout_constraintTop_toBottomOf="@+id/Circle_Electronics" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -235,7 +235,7 @@
 
 
         <ImageView
-            android:id="@+id/FurnitureBtn"
+            android:id="@+id/Circle_furniture"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
@@ -261,7 +261,7 @@
             android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/FurnitureBtn" />
+            app:layout_constraintTop_toBottomOf="@+id/Circle_furniture" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -285,7 +285,7 @@
 
 
         <ImageView
-            android:id="@+id/OtherBtn"
+            android:id="@+id/Circle_others"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
@@ -311,12 +311,13 @@
             android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/OtherBtn" />
+            app:layout_constraintTop_toBottomOf="@+id/Circle_others" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Layout_downbar"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginBottom="4dp"
@@ -342,7 +343,7 @@
 
 
             <ImageView
-                android:id="@+id/HomeBlueBtn"
+                android:id="@+id/Icon_home_blue"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="8dp"
@@ -368,7 +369,7 @@
                 android:textSize="10sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/HomeBlueBtn" />
+                app:layout_constraintTop_toBottomOf="@+id/Icon_home_blue" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -390,7 +391,7 @@
 
 
             <ImageView
-                android:id="@+id/SearchBlueBtn"
+                android:id="@+id/Icon_search_blue"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="8dp"
@@ -416,7 +417,7 @@
                 android:textSize="10sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/SearchBlueBtn" />
+                app:layout_constraintTop_toBottomOf="@+id/Icon_search_blue" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -438,7 +439,7 @@
 
 
             <ImageView
-                android:id="@+id/UserAccountBlueBtn"
+                android:id="@+id/Icon_useraccount_blue"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="8dp"
@@ -464,7 +465,7 @@
                 android:textSize="10sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/UserAccountBlueBtn" />
+                app:layout_constraintTop_toBottomOf="@+id/Icon_useraccount_blue" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
