@@ -13,6 +13,9 @@
         <activity android:name=".MyAccount" />
         <activity android:name=".MyProfile" />
         <activity android:name=".OrdersPage" />
+        <activity android:name=".Cart"></activity>
+        <activity android:name=".SignUpPage" />
+        <activity android:name=".OrdersPage"></activity>
         <activity android:name=".ProductPage" />
         <activity android:name=".paymentPage" />
         <activity

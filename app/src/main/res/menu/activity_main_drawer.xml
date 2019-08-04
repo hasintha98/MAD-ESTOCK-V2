@@ -13,6 +13,11 @@
 
             android:title="Sign up" />
 
+        <item
+            android:id="@+id/nav_Cart"
+            android:icon="@drawable/shoping_cart"
+            android:title="Cart" />
+
     </group>
 
     <item android:title="others">
@@ -34,6 +39,15 @@
                 android:id="@+id/nav_myOrders"
                 android:icon="@drawable/orders_icon_black"
                 android:title="myOrders" />
+            <item
+                android:id="@+id/nav_myAccount"
+                android:icon="@drawable/useraccount_icon"
+                android:title="myAccount" />
+
+            <item
+                android:id="@+id/nav_notifications"
+                android:icon="@drawable/notification_large"
+                android:title="Notifications" />
         </menu>
     </item>
 

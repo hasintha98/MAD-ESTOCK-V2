@@ -20,7 +20,7 @@
         android:layout_marginBottom="32dp"
         android:background="@drawable/product_box"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/Layout_signin_header"
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -75,7 +75,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
+        android:id="@+id/Layout_signin_header"
         android:layout_width="150dp"
         android:layout_height="178dp"
         android:layout_marginTop="48dp"
@@ -202,7 +202,7 @@
         android:layout_marginRight="32dp"
         android:background="@drawable/product_box"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/Layout_signin_header">
 
 
         <ImageView

@@ -7,7 +7,7 @@
     tools:context=".paymentPage">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/Text_signin"
         android:layout_width="411dp"
         android:layout_height="64dp"
         android:background="#edf0f0"
@@ -37,7 +37,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/Text_signin" />
 
     <TextView
         android:id="@+id/textView4"
@@ -71,7 +71,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/Text_signin" />
 
     <TextView
         android:id="@+id/textView5"
@@ -119,7 +119,7 @@
         android:text="Security Code :"
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/Text_signin"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -189,7 +189,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/Text_signin"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <EditText
