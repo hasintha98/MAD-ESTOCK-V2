@@ -26,7 +26,7 @@ import android.widget.Toast;
     public class MainActivity extends AppCompatActivity
             implements NavigationView.OnNavigationItemSelectedListener  {
 
-        ImageView imageView2, ClothingBtn, CosmeticsBtn, ElecBtn, FurnitureBtn, OtherBtn, UserAccountBlueBtn, SearchBlueBtn, HomeBlueBtn;
+        ImageView mobileBtn, ClothingBtn, CosmeticsBtn, ElecBtn, FurnitureBtn, OtherBtn, UserAccountBlueBtn, SearchBlueBtn, HomeBlueBtn;
         ConstraintLayout mobileConstraint;
 
         @Override
@@ -36,7 +36,7 @@ import android.widget.Toast;
             Toolbar toolbar = findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
 
-        imageView2 = (ImageView) findViewById(R.id.Circle_mobilephones);
+            mobileBtn = (ImageView) findViewById(R.id.Circle_mobilephones);
         ClothingBtn = (ImageView) findViewById(R.id.Circle_clothing);
         mobileConstraint = (ConstraintLayout) findViewById(R.id.mobileConstraint) ;
         CosmeticsBtn = (ImageView) findViewById(R.id.Circle_cosmetics);
@@ -57,7 +57,7 @@ import android.widget.Toast;
                 }
             });
 
-            imageView2.setOnClickListener(new View.OnClickListener() {
+            mobileBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(MainActivity.this, "Mobile phones...", Toast.LENGTH_SHORT).show();
@@ -70,6 +70,7 @@ import android.widget.Toast;
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(MainActivity.this, "clothing..", Toast.LENGTH_SHORT).show();
+
 
                 }
             });
@@ -174,32 +175,33 @@ import android.widget.Toast;
             int id = item.getItemId();
 
             if (id == R.id.nav_SignIn) {
-                Toast.makeText(MainActivity.this, "nav_SignIn Clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Sign in ...", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, SignInPageUpdated.class));
                 // Handle the camera action
             } else if (id == R.id.nav_SignUp) {
-                Toast.makeText(MainActivity.this, "nav_SignUp Clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Sign up...", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, SignUpPage.class));
 
             } else if (id == R.id.nav_myAccount) {
-                Toast.makeText(MainActivity.this, "nav_myAccount Clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "My Account....", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, MyAccount.class));
 
             }  else if (id == R.id.nav_category) {
-
+                Toast.makeText(MainActivity.this, "Category...", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, MainActivity.class));
             } else if (id == R.id.nav_contactUs) {
-
+                Toast.makeText(MainActivity.this, "Contact us...", Toast.LENGTH_SHORT).show();
             } else if (id == R.id.nav_notifications) {
-                Toast.makeText(MainActivity.this, "nav_notifications Clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Notifications...", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, Notification.class));
 
             } else if (id == R.id.nav_aboutUs) {
-
+                Toast.makeText(MainActivity.this, "About us...", Toast.LENGTH_SHORT).show();
             } else if (id == R.id.nav_myOrders) {
-                Toast.makeText(MainActivity.this, "nav_myOrders Clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "My orders...", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, OrdersPage.class));
             } else if (id == R.id.nav_Cart) {
-                Toast.makeText(MainActivity.this, "nav_Cart Clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Shopping cart", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, Cart.class));
             }
 

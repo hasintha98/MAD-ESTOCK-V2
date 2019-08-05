@@ -35,7 +35,7 @@
         tools:ignore="MissingConstraints,VectorDrawableCompat" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/Text_Payment_Done"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -44,7 +44,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Dilini Madhumali"
+        android:text="@string/Text_profilename"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/Profile_picture">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/Text_Payment_Header2"
             android:layout_width="274dp"
             android:layout_height="59dp"
             android:layout_marginStart="8dp"
@@ -69,7 +69,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            android:text="My Orders"
+            android:text="@string/Text_myorder"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -91,7 +91,7 @@
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintStart_toEndOf="@+id/Text_Payment_Header2"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/right_arrow"
             tools:ignore="MissingConstraints" />
@@ -107,7 +107,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintEnd_toStartOf="@+id/Text_Payment_Header2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/search_icon"
@@ -117,15 +117,15 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout3"
         android:layout_width="408dp"
-        android:layout_height="120dp"
+        android:layout_height="104dp"
         android:layout_marginTop="124dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Profile_picture">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/Text_Product_ProductName"
             android:layout_width="268dp"
             android:layout_height="63dp"
             android:layout_marginStart="8dp"
@@ -134,7 +134,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            android:text="My Profile"
+            android:text="@string/Text_myprofile"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -156,7 +156,7 @@
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintStart_toEndOf="@+id/Text_Product_ProductName"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/right_arrow"
             tools:ignore="MissingConstraints" />
@@ -172,7 +172,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView3"
+            app:layout_constraintEnd_toStartOf="@+id/Text_Product_ProductName"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/useraccount_icon"
@@ -190,7 +190,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/Text_Payment_Card_Number"
             android:layout_width="271dp"
             android:layout_height="57dp"
             android:layout_marginStart="8dp"
@@ -199,7 +199,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Logout"
+            android:text="@string/Text_logout"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -220,13 +220,13 @@
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView5"
+            app:layout_constraintEnd_toStartOf="@+id/Text_Payment_Card_Number"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/logout" />
 
         <ImageView
-            android:id="@+id/imageView11"
+            android:id="@+id/Button_logout"
             android:layout_width="35dp"
             android:layout_height="36dp"
             android:layout_marginStart="8dp"
@@ -237,7 +237,7 @@
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintStart_toEndOf="@+id/Text_Payment_Card_Number"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/right_arrow" />
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,5 @@
 <resources>
+    <!-- NavigationBar -->
     <string name="app_name">Estock</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -31,10 +32,9 @@
     <string name="Text_useraccount_blue">User Account</string>
 
     <!-- ProductListPage -->
-    <string name="layout_iphoneX"></string>
-    <string name="Image_iphoneX"></string>
+
     <string name="Text_iphoneX_name"></string>
-    <string name="Text_iphoneX_price"></string>
+
 
 
     <!-- SignUpPage -->
@@ -66,5 +66,52 @@
     <string name="Text_total">Rs.1500</string>
     <string name="Text_shopping">Continue Shopping</string>
     <string name="Text_checkout">Checkout</string>
+
+
+    <!-- MyAccoutPage -->
+    <string name="Text_myorder">My Orders</string>
+    <string name="Text_myprofile">My Profile</string>
+    <string name="Text_logout">Logout</string>
+    <string name="Text_profilename">Dilini Madhumali</string>
+
+    <!-- MyProfilePage -->
+    <string name="Text_myprofileheader">My Profile</string>
+    <string name="Text_profilename2">Dilini Madhumali</string>
+    <string name="Text_changename">Change Username</string>
+    <string name="Text_changeaddress">Change Address</string>
+
+    <!-- NotificationPage -->
+    <string name="Text_notification">Notification</string>
+    <string name="Text_noreceivenotifi">No notification received!</string>
+
+    <!-- PaymentPage -->
+
+    <string name="Text_Payment_Header">Payment</string>
+    <string name="Text_Payment_Header2">Credit/Debit card details</string>
+    <string name="Text_Payment_Name">Name on card :</string>
+    <string name="Text_Payment_Card_Number">Card number :</string>
+    <string name="Text_Payment_Security">Security Code :</string>
+    <string name="Text_Payment_Expiry_Date">Expiry Date :</string>
+    <string name="Text_Payment_Email">E-mail :</string>
+    <string name="Text_Payment_Cancel">Cancel</string>
+    <string name="Text_Payment_Done">Done</string>
+    <string name="Text_Payment_Footer">All rights reserved.</string>
+
+    <!-- ProductPage -->
+
+    <string name="Text_Product_ProductName">IPhone X 256GB - White</string>
+    <string name="Text_Product_Price">Rs.165,000.00</string>
+    <string name="Text_Product_Description">Description</string>
+    <string name="Text_Product_Price2">Rs.165,000.00</string>
+    <string name="Text_Product_Cart">ADD TO CART</string>
+
+
+    <!-- MyOrdersPage -->
+
+    <string name="Text_MyOrders_Header">My Orders</string>
+    <string name="Text_MyOrders_Text">Order history is not available!</string>
+    <string name="Text_MyOrders_Footer">All rights reserved</string>
+
+
 
 </resources>

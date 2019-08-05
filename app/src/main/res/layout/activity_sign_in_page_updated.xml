@@ -19,7 +19,7 @@
     app:layout_constraintVertical_bias="0.05">
 
     <TextView
-        android:id="@+id/Text_signin"
+        android:id="@+id/Text_Payment_Header"
         android:layout_width="152dp"
         android:layout_height="73dp"
         android:layout_marginStart="8dp"
@@ -46,11 +46,11 @@ app:layout_constraintBottom_toBottomOf="parent"
 app:layout_constraintEnd_toEndOf="parent"
 app:layout_constraintHorizontal_bias="0.504"
 app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintTop_toBottomOf="@+id/constraintLayout10"
+app:layout_constraintTop_toBottomOf="@+id/Text_MyOrders_Footer"
 app:layout_constraintVertical_bias="0.141">
 
 <TextView
-    android:id="@+id/Text_signinbtn"
+    android:id="@+id/Text_Payment_Name"
     android:layout_width="107dp"
     android:layout_height="49dp"
     android:layout_marginStart="8dp"
@@ -83,7 +83,7 @@ app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toBottomOf="@+id/Layout_signin_header">
 
 <TextView
-    android:id="@+id/Text_name"
+    android:id="@+id/Text_Payment_Done"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginStart="8dp"
@@ -111,12 +111,12 @@ app:layout_constraintTop_toBottomOf="@+id/Layout_signin_header">
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.503"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/Text_name"
+    app:layout_constraintTop_toBottomOf="@+id/Text_Payment_Done"
     app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 <androidx.constraintlayout.widget.ConstraintLayout
-android:id="@+id/constraintLayout10"
+android:id="@+id/Text_MyOrders_Footer"
 android:layout_width="398dp"
 android:layout_height="130dp"
 android:layout_marginStart="8dp"
@@ -130,7 +130,7 @@ app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toBottomOf="@+id/constraintLayout9">
 
 <TextView
-    android:id="@+id/Text_pw"
+    android:id="@+id/Text_Payment_Footer"
     android:layout_width="wrap_content"
     android:layout_height="0dp"
     android:layout_marginStart="8dp"
@@ -160,7 +160,7 @@ app:layout_constraintTop_toBottomOf="@+id/constraintLayout9">
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.585"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/Text_pw"
+    app:layout_constraintTop_toBottomOf="@+id/Text_Payment_Footer"
     app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
