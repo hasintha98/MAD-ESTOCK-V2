@@ -18,6 +18,17 @@
             android:icon="@drawable/shoping_cart"
             android:title="Cart" />
 
+        <item
+            android:id="@+id/nav_addProducts"
+            android:icon="@drawable/sell_product"
+            android:title="Sell your Products" />
+
+        <item
+            android:id="@+id/nav_myProducts"
+            android:icon="@drawable/myproducts"
+            android:title="My products" />
+
+
     </group>
 
     <item android:title="others">

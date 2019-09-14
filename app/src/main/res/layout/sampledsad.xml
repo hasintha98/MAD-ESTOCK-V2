@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:orientation="vertical"
-    android:scaleType="fitEnd"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="MainActivity"
     tools:showIn="@layout/app_bar_main">
@@ -23,11 +20,19 @@
         android:id="@+id/mobileConstraint"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/circle"
-        app:layout_constraintEnd_toEndOf="@+id/Layout_cosmetics"
-        app:layout_constraintStart_toStartOf="@+id/Layout_cosmetics"
-        app:layout_constraintTop_toBottomOf="@+id/Layout_cosmetics">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19">
 
 
         <ImageView
@@ -67,12 +72,19 @@
         android:id="@+id/Layout_clothing"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/circle"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Input_searchbar">
+        app:layout_constraintHorizontal_bias="0.864"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19">
 
 
         <ImageView
@@ -112,12 +124,19 @@
         android:id="@+id/Layout_cosmetics"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.155"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Input_searchbar">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.46">
 
 
         <ImageView
@@ -157,11 +176,19 @@
         android:id="@+id/Layout_electronics"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/circle"
-        app:layout_constraintEnd_toEndOf="@+id/Layout_clothing"
-        app:layout_constraintStart_toStartOf="@+id/Layout_clothing"
-        app:layout_constraintTop_toBottomOf="@+id/Layout_clothing">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.864"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.46">
 
 
         <ImageView
@@ -201,12 +228,19 @@
         android:id="@+id/Layout_Furniture"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/circle"
-        app:layout_constraintEnd_toEndOf="@+id/mobileConstraint"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/mobileConstraint"
-        app:layout_constraintTop_toBottomOf="@+id/mobileConstraint">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.731">
 
 
         <ImageView
@@ -246,11 +280,19 @@
         android:id="@+id/Layout_others"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/circle"
-        app:layout_constraintEnd_toEndOf="@+id/Layout_electronics"
-        app:layout_constraintStart_toStartOf="@+id/Layout_electronics"
-        app:layout_constraintTop_toBottomOf="@+id/Layout_electronics">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.864"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.73">
 
 
         <ImageView
@@ -292,8 +334,7 @@
         android:layout_height="70dp"
         android:background="@color/downBar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        tools:layout_editor_absoluteX="0dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/Layout_home_icon"
@@ -302,14 +343,14 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="32dp"
-
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
+
             android:layout_marginBottom="32dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/Layout_useraccount_icon"
-            app:layout_constraintHorizontal_bias="0.493"
-            app:layout_constraintStart_toEndOf="@+id/Layout_search_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.098"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
 
@@ -352,8 +393,13 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+
             android:layout_marginBottom="32dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -394,6 +440,8 @@
             android:id="@+id/Layout_useraccount_icon"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
@@ -401,6 +449,8 @@
             android:layout_marginBottom="32dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.891"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
 
@@ -437,16 +487,4 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="235dp"
-        android:layout_height="144dp"
-        android:layout_marginEnd="411dp"
-        android:layout_marginRight="411dp"
-        android:layout_marginBottom="790dp"
-        android:src="@drawable/back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -36,7 +36,6 @@
     <string name="Text_iphoneX_name"></string>
 
 
-
     <!-- SignUpPage -->
     <string name="Text_signup">SIGN UP</string>
     <string name="Text_namesignup">Name</string>
@@ -112,6 +111,15 @@
     <string name="Text_MyOrders_Text">Order history is not available!</string>
     <string name="Text_MyOrders_Footer">All rights reserved</string>
 
+    <!--AddProducts-->
+
+    <string-array name="AdddropDown">
+        <item>Mobile</item>
+        <item>Furniture</item>
+        <item>Mobile</item>
+        <item>Mobile</item>
+        <item>Mobile</item>
+    </string-array>
 
 
 </resources>

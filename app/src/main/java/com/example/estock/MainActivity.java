@@ -61,8 +61,12 @@ import android.widget.Toast;
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(MainActivity.this, "Mobile phones...", Toast.LENGTH_SHORT).show();
+                    int id = 1;
+                    Intent intent = new Intent(getApplicationContext(),ProductListPage.class);
+                    intent.putExtra("id",id);
+                    startActivity(intent);
 
-                    startActivity(new Intent(MainActivity.this, ProductListPage.class));
+
                 }
             });
 
@@ -70,6 +74,10 @@ import android.widget.Toast;
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(MainActivity.this, "clothing..", Toast.LENGTH_SHORT).show();
+                    int id = 2;
+                    Intent intent = new Intent(getApplicationContext(),ProductListPage.class);
+                    intent.putExtra("id",id);
+                    startActivity(intent);
 
 
                 }
@@ -79,6 +87,10 @@ import android.widget.Toast;
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(MainActivity.this, "Cosmetics...", Toast.LENGTH_SHORT).show();
+                    int id = 3;
+                    Intent intent = new Intent(getApplicationContext(),ProductListPage.class);
+                    intent.putExtra("id",id);
+                    startActivity(intent);
 
                 }
             });
@@ -87,6 +99,10 @@ import android.widget.Toast;
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(MainActivity.this, "Electronics...", Toast.LENGTH_SHORT).show();
+                    int id = 4;
+                    Intent intent = new Intent(getApplicationContext(),ProductListPage.class);
+                    intent.putExtra("id",id);
+                    startActivity(intent);
                 }
             });
 
@@ -94,6 +110,10 @@ import android.widget.Toast;
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(MainActivity.this, "Furniture...", Toast.LENGTH_SHORT).show();
+                    int id = 5;
+                    Intent intent = new Intent(getApplicationContext(),ProductListPage.class);
+                    intent.putExtra("id",id);
+                    startActivity(intent);
 
                 }
             });
@@ -102,6 +122,10 @@ import android.widget.Toast;
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(MainActivity.this, "Others...", Toast.LENGTH_SHORT).show();
+                    int id = 6;
+                    Intent intent = new Intent(getApplicationContext(),ProductListPage.class);
+                    intent.putExtra("id",id);
+                    startActivity(intent);
                 }
             });
 
@@ -181,6 +205,14 @@ import android.widget.Toast;
             } else if (id == R.id.nav_SignUp) {
                 Toast.makeText(MainActivity.this, "Sign up...", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, SignUpPage.class));
+
+            } else if (id == R.id.nav_addProducts) {
+                Toast.makeText(MainActivity.this, "Selling page...", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, AddProducts.class));
+
+            } else if (id == R.id.nav_myProducts) {
+            Toast.makeText(MainActivity.this, "My Products...", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(MainActivity.this, MyProducts.class));
 
             } else if (id == R.id.nav_myAccount) {
                 Toast.makeText(MainActivity.this, "My Account....", Toast.LENGTH_SHORT).show();

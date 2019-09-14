@@ -133,7 +133,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
-        android:id="@+id/Button_changeUname"
+        android:id="@+id/ImageView_productImage"
         android:layout_width="148dp"
         android:layout_height="91dp"
         android:layout_marginTop="4dp"

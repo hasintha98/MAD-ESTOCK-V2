@@ -27,7 +27,7 @@ public class MyProfile extends AppCompatActivity {
         Text_changeaddress.setText(R.string.Text_changeaddress);
 
         Button_changeAddress = (ImageView) findViewById(R.id.Button_changeAddress);
-        Button_changeUname = (ImageView) findViewById(R.id.Button_changeUname);
+        Button_changeUname = (ImageView) findViewById(R.id.ImageView_productImage);
 
         Button_changeAddress.setOnClickListener(new View.OnClickListener() {
             @Override

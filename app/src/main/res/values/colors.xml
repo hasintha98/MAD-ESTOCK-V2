@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#00CBD8</color>
+    <color name="colorPrimaryLight">#1200CBD8</color>
+    <color name="colorPrimary">#F000CBD8</color>
     <color name="colorPrimaryDark">#03A0AD</color>
     <color name="colorAccent">#D81B60</color>
     <color name="paymentDone">#18d955</color>
-    <color name="paymentCancel">#d11717</color>
+    <color name="Cancel">#d11717</color>
     <color name="downBar">#F5F5F5</color>
     <color name="productCart">#1ecc16</color>
 </resources>
