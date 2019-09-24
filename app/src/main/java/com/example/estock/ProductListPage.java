@@ -27,16 +27,17 @@ public class ProductListPage extends AppCompatActivity {
     DatabaseHelper_Products myDB;
     String[] productId;
     EditText search_products;
-    Button btn_search;
 
+
+    private ArrayAdapter listAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_list_page);
 
-        //search_products = findViewById(R.id.search_products);
-        btn_search = findViewById(R.id.btn_search);
+        search_products = (EditText) findViewById(R.id.search_products);
+
 
 
 
@@ -58,9 +59,26 @@ public class ProductListPage extends AppCompatActivity {
                 while (data.moveToNext()) {
                     productId[count] = data.getString(0);
                     thelist.add("Product Name : " + data.getString(2) + " \n Product type : " + data.getString(3) +"\n Price : " + data.getString(5));
-                    ListAdapter listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, thelist);
+                    listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, thelist);
                     listView.setAdapter(listAdapter);
                     count++;
+
+                    search_products.addTextChangedListener(new TextWatcher() {
+                        @Override
+                        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                        }
+
+                        @Override
+                        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                            (ProductListPage.this).listAdapter.getFilter().filter(charSequence);
+                        }
+
+                        @Override
+                        public void afterTextChanged(Editable editable) {
+
+                        }
+                    });
 
                 }
 
@@ -93,6 +111,23 @@ public class ProductListPage extends AppCompatActivity {
                     listView.setAdapter(listAdapter);
                     count++;
 
+                    search_products.addTextChangedListener(new TextWatcher() {
+                        @Override
+                        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                        }
+
+                        @Override
+                        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                            (ProductListPage.this).listAdapter.getFilter().filter(charSequence);
+                        }
+
+                        @Override
+                        public void afterTextChanged(Editable editable) {
+
+                        }
+                    });
+
                 }
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
@@ -122,6 +157,23 @@ public class ProductListPage extends AppCompatActivity {
                     listView.setAdapter(listAdapter);
                     count++;
 
+                    search_products.addTextChangedListener(new TextWatcher() {
+                        @Override
+                        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                        }
+
+                        @Override
+                        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                            (ProductListPage.this).listAdapter.getFilter().filter(charSequence);
+                        }
+
+                        @Override
+                        public void afterTextChanged(Editable editable) {
+
+                        }
+                    });
+
                 }
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
@@ -150,6 +202,23 @@ public class ProductListPage extends AppCompatActivity {
                     ListAdapter listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, thelist);
                     listView.setAdapter(listAdapter);
                     count++;
+
+                    search_products.addTextChangedListener(new TextWatcher() {
+                        @Override
+                        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                        }
+
+                        @Override
+                        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                            (ProductListPage.this).listAdapter.getFilter().filter(charSequence);
+                        }
+
+                        @Override
+                        public void afterTextChanged(Editable editable) {
+
+                        }
+                    });
 
                 }
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -181,6 +250,23 @@ public class ProductListPage extends AppCompatActivity {
                     listView.setAdapter(listAdapter);
                     count++;
 
+                    search_products.addTextChangedListener(new TextWatcher() {
+                        @Override
+                        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                        }
+
+                        @Override
+                        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                            (ProductListPage.this).listAdapter.getFilter().filter(charSequence);
+                        }
+
+                        @Override
+                        public void afterTextChanged(Editable editable) {
+
+                        }
+                    });
+
                 }
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
@@ -210,6 +296,23 @@ public class ProductListPage extends AppCompatActivity {
                     ListAdapter listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, thelist);
                     listView.setAdapter(listAdapter);
                     count++;
+
+                    search_products.addTextChangedListener(new TextWatcher() {
+                        @Override
+                        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                        }
+
+                        @Override
+                        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                            (ProductListPage.this).listAdapter.getFilter().filter(charSequence);
+                        }
+
+                        @Override
+                        public void afterTextChanged(Editable editable) {
+
+                        }
+                    });
 
                 }
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

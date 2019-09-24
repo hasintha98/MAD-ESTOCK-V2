@@ -29,7 +29,7 @@
             android:layout_marginTop="32dp"
             android:text="Product name"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/addPhoto" />
+            app:layout_constraintTop_toBottomOf="@+id/productPhoto" />
 
         <TextView
             android:id="@+id/textView2"
@@ -44,7 +44,7 @@
 
         <EditText
             android:background="@color/colorPrimaryLight"
-            android:id="@+id/editText_name"
+            android:id="@+id/Text_name"
             android:layout_width="183dp"
             android:layout_height="43dp"
             android:layout_marginStart="8dp"
@@ -61,7 +61,7 @@
         <EditText
 
             android:background="@color/colorPrimaryLight"
-            android:id="@+id/editText_qty"
+            android:id="@+id/Text_qty"
             android:layout_width="185dp"
             android:layout_height="42dp"
             android:layout_marginEnd="32dp"
@@ -112,7 +112,7 @@
 
         <EditText
             android:background="@color/colorPrimaryLight"
-            android:id="@+id/editText_price"
+            android:id="@+id/Text_price"
             android:layout_width="184dp"
             android:layout_height="48dp"
             android:layout_marginStart="8dp"
@@ -144,7 +144,7 @@
             app:layout_constraintStart_toEndOf="@+id/textView2" />
 
         <ImageView
-            android:id="@+id/addPhoto"
+            android:id="@+id/productPhoto"
             android:layout_width="102dp"
             android:layout_height="77dp"
             android:layout_marginStart="150dp"
@@ -159,7 +159,7 @@
             app:srcCompat="@drawable/add_photo" />
 
         <EditText
-            android:id="@+id/editText_desc"
+            android:id="@+id/Text_desc"
             android:layout_width="209dp"
             android:layout_height="92dp"
             android:layout_marginStart="8dp"

@@ -19,7 +19,8 @@ public class DatabaseHelper_UpdateAppInfo extends SQLiteOpenHelper {
 
 
     public DatabaseHelper_UpdateAppInfo(Context context) {
-        super(context, DATABASE_NAME,null,3);
+
+        super(context, DATABASE_NAME,null,11);
     }
 
 

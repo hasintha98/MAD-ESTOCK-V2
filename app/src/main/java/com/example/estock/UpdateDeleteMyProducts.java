@@ -1,12 +1,11 @@
 package com.example.estock;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
-import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -27,7 +26,7 @@ public class UpdateDeleteMyProducts extends AppCompatActivity {
     EditText editName,editType,editQty,editId,editPrice,editDesc;
 
     Button btnUpdate,btnDelete;
-
+    public static final String MY_PREFS_NAME = "MyPrefsFile";
     private static final int PICK_IMAGE_REQUEST = 234;
     Bitmap bitmap;
     Uri filePath;
@@ -56,15 +55,15 @@ public class UpdateDeleteMyProducts extends AppCompatActivity {
         setContentView(R.layout.activity_update_delete_my_products);
         myDb = new DatabaseHelper_Products(getApplicationContext());
 
-        productPhoto = (ImageView) findViewById(R.id.addPhoto);
-        editName = (EditText)findViewById(R.id.editText_name);
-        editType = (EditText) findViewById(R.id.editText_type);
-        editQty = (EditText)findViewById(R.id.editText_qty);
-        editPrice = (EditText) findViewById(R.id.editText_price);
-        editDesc = (EditText) findViewById(R.id.editText_desc);
-        editId = (EditText) findViewById(R.id.editText_id);
+        productPhoto = (ImageView) findViewById(R.id.productPhoto);
+        editName = (EditText)findViewById(R.id.Text_name);
+        editType = (EditText) findViewById(R.id.Text_type);
+        editQty = (EditText)findViewById(R.id.Text_qty);
+        editPrice = (EditText) findViewById(R.id.Text_price);
+        editDesc = (EditText) findViewById(R.id.Text_desc);
+        editId = (EditText) findViewById(R.id.Text_id);
         btnUpdate = (Button) findViewById(R.id.button_update);
-        btnDelete = (Button) findViewById(R.id.button_delete);
+        btnDelete = (Button) findViewById(R.id.btnDelete);
 
 
 
@@ -123,7 +122,9 @@ public class UpdateDeleteMyProducts extends AppCompatActivity {
                 int qty = Integer.parseInt(editQty.getText().toString());
                 double price = Double.parseDouble(editPrice.getText().toString());
                 String productDesc = editDesc.getText().toString();
-                boolean isUpdated = myDb.updateData(editId.getText().toString(),myDb.getBytes(bitmap),productName, Type, qty,price,productDesc);
+                SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+                String Uname = prefs.getString("username", "No name defined");
+                boolean isUpdated = myDb.updateData(editId.getText().toString(),myDb.getBytes(bitmap),productName, Type, qty,price,productDesc,Uname);
 
                 if(isUpdated == true) {
                     Toast.makeText(UpdateDeleteMyProducts.this, "You have successfully updated the item", Toast.LENGTH_LONG).show();
