@@ -19,7 +19,7 @@ public class MyProfile extends AppCompatActivity {
 
         TextView Text_myprofileheader = findViewById(R.id.Text_Payment_Name);
         Text_myprofileheader.setText(R.string.Text_myprofileheader);
-        TextView Text_profilename = findViewById(R.id.Text_Payment_Done);
+        TextView Text_profilename = findViewById(R.id.Text_Profile_name);
         Text_profilename.setText(R.string.Text_profilename);
         TextView Text_changename = findViewById(R.id.Text_Payment_Header2);
         Text_changename.setText(R.string.Text_changename);

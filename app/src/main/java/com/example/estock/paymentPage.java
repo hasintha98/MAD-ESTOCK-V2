@@ -36,7 +36,7 @@ public class paymentPage extends AppCompatActivity {
         TextView Text_Payment_Cancel = findViewById(R.id.Text_Payment_Cancel);
         Text_Payment_Cancel.setText(R.string.Text_Payment_Cancel);
 
-        TextView Text_Payment_Done = findViewById(R.id.Text_Payment_Done);
+        TextView Text_Payment_Done = findViewById(R.id.Text_Profile_name);
         Text_Payment_Done.setText(R.string.Text_Payment_Done);
 
         TextView Text_Payment_Footer = findViewById(R.id.Text_Payment_Footer);

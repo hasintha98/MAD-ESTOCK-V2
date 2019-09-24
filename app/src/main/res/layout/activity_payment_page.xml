@@ -293,13 +293,13 @@
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/Text_Payment_Done"
+            app:layout_constraintEnd_toStartOf="@+id/Text_Profile_name"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/payment_done_icon" />
 
         <TextView
-            android:id="@+id/Text_Payment_Done"
+            android:id="@+id/Text_Profile_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

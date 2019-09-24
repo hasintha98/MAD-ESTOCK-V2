@@ -70,7 +70,7 @@ public class ProductPage extends AppCompatActivity {
 
         //Text_Product_ProductName.setText(data.getString(2));
         //double price = Double.parseDouble(Text_Product_Price.getText().toString());
-        int qtyOut = Integer.parseInt(EditText_Product_qty.toString());
+      //  int qtyOut = Integer.parseInt(EditText_Product_qty.toString());
        // double priceOut = Double.parseDouble(price);
 
       // double total = priceOut * (double)qtyOut;

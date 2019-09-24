@@ -35,7 +35,7 @@ public class ProductListPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_list_page);
 
-        search_products = findViewById(R.id.search_products);
+        //search_products = findViewById(R.id.search_products);
         btn_search = findViewById(R.id.btn_search);
 
 
@@ -64,22 +64,7 @@ public class ProductListPage extends AppCompatActivity {
 
                 }
 
-                search_products.addTextChangedListener(new TextWatcher() {
-                    @Override
-                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-                    }
-
-                    @Override
-                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-                    }
-
-                    @Override
-                    public void afterTextChanged(Editable editable) {
-
-                    }
-                });
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
