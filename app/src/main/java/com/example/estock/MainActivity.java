@@ -1,8 +1,10 @@
 package com.example.estock;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import android.preference.PreferenceManager;
 import android.view.View;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -52,12 +54,16 @@ import android.os.Bundle;
 
 
         Text_nav_user = (TextView)findViewById(R.id.Text_nav_username);
-            Bundle extras = getIntent().getExtras();
-            String username = null;
-            if(extras != null){
-                username = extras.getString("UserName");
-                Text_nav_user.setText(username);
-            }
+
+            SharedPreferences mSharedPreference1 =   PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+//            Text_nav_user.setText(mSharedPreference1.getString(  "username", null));
+//            Text_nav_user.setText(uName);
+//            Bundle extras = getIntent().getExtras();
+//            String username = null;
+//            if(extras != null){
+//                username = extras.getString("UserName");
+//                Text_nav_user.setText(username);
+//            }
 
 
 

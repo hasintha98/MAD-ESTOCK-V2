@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -21,7 +22,7 @@ public class AddProducts extends AppCompatActivity {
     DatabaseHelper_Products myDb;
     ImageView productPhoto;
     EditText editName,editType,editQty,editdesc,editPrice;
-    //Spinner spinnerType;
+    Spinner spinnerType;
     Button btnAddData;
 
     private static final int PICK_IMAGE_REQUEST = 234;
@@ -56,7 +57,7 @@ public class AddProducts extends AppCompatActivity {
 
         productPhoto = (ImageView) findViewById(R.id.addPhoto);
         editName = (EditText)findViewById(R.id.editText_name);
-        editType = (EditText) findViewById(R.id.editText_type);
+        spinnerType = (Spinner) findViewById(R.id.spinner_type);
         editQty = (EditText)findViewById(R.id.editText_qty);
         editPrice = (EditText) findViewById(R.id.editText_price);
         editdesc = (EditText) findViewById(R.id.editText_desc);
@@ -101,7 +102,7 @@ public class AddProducts extends AppCompatActivity {
                     return;
                 }
                 String productName = editName.getText().toString();
-                String Type = editType.getText().toString();
+                String Type = spinnerType.getSelectedItem().toString();
                 int qty = Integer.parseInt(editQty.getText().toString());
                 double price = Double.parseDouble(editPrice.getText().toString());
                 String productDesc = editdesc.getText().toString();

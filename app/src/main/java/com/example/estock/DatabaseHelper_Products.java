@@ -65,6 +65,12 @@ public class DatabaseHelper_Products extends SQLiteOpenHelper {
         return res;
     }
 
+//    public Cursor getDataByUser(int uid) {
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        Cursor res = db.rawQuery("select * from "+TABLE_NAME+" where UID = '"+uid+"'",null);
+//        return res;
+//    }
+
     public Cursor getTypeData(String type) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res = db.rawQuery("select * from "+TABLE_NAME+" where TYPE = '"+type+"'",null);
@@ -76,8 +82,6 @@ public class DatabaseHelper_Products extends SQLiteOpenHelper {
         Cursor res = db.rawQuery("select * from "+TABLE_NAME+" where ID = '"+id+"'",null);
         return res;
     }
-
-
 
     public boolean updateData(String Id, byte[] image, String name, String type, int qty, double price, String desc) {
         SQLiteDatabase db = getWritableDatabase();

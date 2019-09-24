@@ -13,7 +13,7 @@
     tools:showIn="@layout/app_bar_main">
 
     <androidx.appcompat.widget.SearchView
-        android:id="@+id/Input_searchbar"
+        android:id="@+id/search_products"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -72,7 +72,7 @@
         android:layout_marginRight="32dp"
         android:background="@drawable/circle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Input_searchbar">
+        app:layout_constraintTop_toBottomOf="@+id/search_products">
 
 
         <ImageView
@@ -117,7 +117,7 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/circle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Input_searchbar">
+        app:layout_constraintTop_toBottomOf="@+id/search_products">
 
 
         <ImageView

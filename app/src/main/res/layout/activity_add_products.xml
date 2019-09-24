@@ -126,10 +126,10 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/textView6" />
 
-        <EditText
+        <Spinner
 
             android:background="@color/colorPrimaryLight"
-            android:id="@+id/editText_type"
+            android:id="@+id/spinner_type"
             android:layout_width="183dp"
             android:layout_height="41dp"
             android:layout_marginStart="100dp"
