@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/estock_app_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DatabaseHelper_UpdateAppInfo"></activity>
+        <activity android:name=".About_Us"></activity>
+        <activity android:name=".DatabaseHelper_UpdateAppInfo" />
         <activity android:name=".Admin_ViewAll" />
         <activity android:name=".Admin_UpdateAppInfo" />
         <activity android:name=".Admin" />

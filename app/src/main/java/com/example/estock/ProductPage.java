@@ -43,8 +43,8 @@ public class ProductPage extends AppCompatActivity {
 
         final TextView Text_Product_Price2 = findViewById(R.id.Text_Product_Price2);
 
-        TextView Text_Product_Cart = findViewById(R.id.Text_Product_Cart);
-        Text_Product_Cart.setText(R.string.Text_Product_Cart);
+        TextView Text_Product_Cart = findViewById(R.id.Text_Product_Buy);
+        Text_Product_Cart.setText(R.string.Text_Product_Buy);
 
 //        Layout_buy.setOnClickListener(new View.OnClickListener() {
 //            @Override

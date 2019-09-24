@@ -22,7 +22,7 @@ public class DatabaseHelper_SignUp extends SQLiteOpenHelper {
 
 
     public DatabaseHelper_SignUp(Context context) {
-        super(context, DATABASE_NAME, null, 1);
+        super(context, DATABASE_NAME, null, 3);
     }
 
     @Override
