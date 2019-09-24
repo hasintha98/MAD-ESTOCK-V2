@@ -17,6 +17,7 @@
     <string name="title_activity_payment_list_page">PaymentListPage</string>
 
     <string name="title_activity_product_list_page">ProductListPage</string>
+    <string name="Text_nav_username"></string>
 
 
     <!-- HomePage -->
@@ -47,6 +48,8 @@
     <string name="Text_con_pw">Confirm Password</string>
     <string name="Input_con_pw"></string>
     <string name="Text_signupbtn">Sign up</string>
+    <string name="note_si">By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy.</string>
+
 
     <!--SignInPage-->
     <string name="Text_signin">SIGN IN</string>
@@ -54,7 +57,13 @@
     <string name="Input_uname"></string>
     <string name="Text_password">Password</string>
     <string name="Input_password"></string>
-    <string name="Text_signinbtn">Sign in</string>
+    <string name="Button_signinbtn">Sign in</string>
+    <string name="Text_register">No account yet? Create one</string>
+    <string name="Text_forgot">Forgotten password?</string>
+    <string name="Text_check">Remember Password</string>
+    <string name="attemptCount"></string>
+    <string name="Text_attemptCount">Attempts : </string>
+
 
     <!--Cart-->
     <string name="Text_mycart">Text_mycart</string>
