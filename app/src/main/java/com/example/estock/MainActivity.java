@@ -59,6 +59,10 @@ import android.os.Bundle;
         Text_nav_user = (TextView)findViewById(R.id.Text_nav_username);
 
             SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+            if(prefs == null) {
+                startActivity(new Intent(MainActivity.this, SignInPageUpdated.class));
+            }
+
             String Uname = prefs.getString("username", "No name defined");
          //test_name.setText(Uname);
 
@@ -227,11 +231,7 @@ import android.os.Bundle;
                 Toast.makeText(MainActivity.this, "Sign in ...", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, SignInPageUpdated.class));
                 // Handle the camera action
-            } else if (id == R.id.nav_SignUp) {
-                Toast.makeText(MainActivity.this, "Sign up...", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this, SignUpPage.class));
-
-            } else if (id == R.id.nav_addProducts) {
+            }  else if (id == R.id.nav_addProducts) {
                 Toast.makeText(MainActivity.this, "Selling page...", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, AddProducts.class));
 
@@ -248,18 +248,16 @@ import android.os.Bundle;
                 startActivity(new Intent(MainActivity.this, MainActivity.class));
             } else if (id == R.id.nav_contactUs) {
                 Toast.makeText(MainActivity.this, "Contact us...", Toast.LENGTH_SHORT).show();
-            } else if (id == R.id.nav_notifications) {
-                Toast.makeText(MainActivity.this, "Notifications...", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this, Notification.class));
+            } else if (id == R.id.nav_LogOut) {
+                Toast.makeText(MainActivity.this, "Logging out...", Toast.LENGTH_SHORT).show();
+                SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
+                editor.remove("username");
 
             } else if (id == R.id.nav_aboutUs) {
                 Toast.makeText(MainActivity.this, "About us...", Toast.LENGTH_SHORT).show();
             } else if (id == R.id.nav_myOrders) {
                 Toast.makeText(MainActivity.this, "My orders...", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, OrdersPage.class));
-            } else if (id == R.id.nav_Cart) {
-                Toast.makeText(MainActivity.this, "Shopping cart", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this, Cart.class));
             }
 
             DrawerLayout drawer = findViewById(R.id.drawer_layout);

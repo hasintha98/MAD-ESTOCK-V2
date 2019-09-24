@@ -92,7 +92,7 @@ public class SignInPageUpdated extends AppCompatActivity {
                     editor.apply();
                     Intent intent = new Intent(SignInPageUpdated.this, MainActivity.class);
                     startActivity(intent);
-                    Toast.makeText(SignInPageUpdated.this, "Success", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignInPageUpdated.this, "You have successfully sign in", Toast.LENGTH_SHORT).show();
 
                 } else if(username.getText().toString().equals("123") && password.getText().toString().equals("123")) {
                     Intent intent = new Intent(SignInPageUpdated.this, Admin.class);
