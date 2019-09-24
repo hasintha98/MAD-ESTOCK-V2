@@ -26,6 +26,7 @@ public class Cart extends AppCompatActivity {
 
                 Toast.makeText(Cart.this, "Layout_checkout Clicked", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(Cart.this, paymentPage.class));
+
             }
         });
     }
