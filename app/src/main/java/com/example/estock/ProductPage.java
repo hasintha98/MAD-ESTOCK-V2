@@ -3,7 +3,6 @@ package com.example.estock;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -29,11 +28,9 @@ public class ProductPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_page);
         myDB = new DatabaseHelper_Products(this);
-        mydb = new DatabaseHelper_MyOrders(this);
 
 
         ImageView imageView_productImage = findViewById(R.id.ImageView_productImage);
@@ -44,16 +41,10 @@ public class ProductPage extends AppCompatActivity {
         Text_Product_Description = findViewById(R.id.Text_Product_Description);
 
 
-        Text_Product_Price2 = findViewById(R.id.Text_Product_Price2);
-        Layout_buy = (ConstraintLayout) findViewById(R.id.contraintLayout_buy) ;
+        final TextView Text_Product_Price2 = findViewById(R.id.Text_Product_Price2);
 
-//       Layout_buy.setOnClickListener(new View.OnClickListener() {
-//           @Override
-//           public void onClick(View view) {
-//               Toast.makeText(ProductPage.this,"Buy Button Clicked",Toast.LENGTH_SHORT).show();
-//               startActivity(new Intent(ProductPage.this,));
-//           }
-//       });
+        TextView Text_Product_Cart = findViewById(R.id.Text_Product_Cart);
+        Text_Product_Cart.setText(R.string.Text_Product_Cart);
 
 //        Layout_buy.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -73,14 +64,15 @@ public class ProductPage extends AppCompatActivity {
         while(data.moveToNext()) {
             String value= EditText_Product_qty.getText().toString();
            // int qty = Integer.parseInt(value);
-            byte[] imag= data.getBlob(1);
+            byte[] imag = data.getBlob(1);
             bt = BitmapFactory.decodeByteArray(imag,0,imag.length);
             imageView_productImage.setImageBitmap(bt);
             Text_Product_ProductName.setText(data.getString(2));
-            Text_Product_ProductId.setText(data.getString(0));
-            Text_Product_Price.setText(data.getString(5));
-            Text_Product_Price2.setText(data.getString(5));
-            Text_Product_Description.setText(data.getString(6));
+            Text_Product_ProductId.setText("Ref No. "+data.getString(0));
+            Text_Product_Price.setText("Rs. "+data.getString(5)+" /=");
+            double price = Double.parseDouble(data.getString(5));
+            Text_Product_Price2.setText("Rs. "+data.getString(5));
+            Text_Product_Description.setText("About the Item \n\n "+data.getString(6));
         }
         //--------functions------
         AddData();
@@ -119,3 +111,5 @@ public class ProductPage extends AppCompatActivity {
        // double total = price * (double)qty;
 
         //Text_Product_Price2.setText(String.valueOf(total));
+
+

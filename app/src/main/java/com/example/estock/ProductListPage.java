@@ -7,12 +7,17 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -21,12 +26,18 @@ public class ProductListPage extends AppCompatActivity {
 
     DatabaseHelper_Products myDB;
     String[] productId;
+    EditText search_products;
+    Button btn_search;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_list_page);
+
+        search_products = findViewById(R.id.search_products);
+        btn_search = findViewById(R.id.btn_search);
+
 
 
         android.widget.ListView listView = (android.widget.ListView) findViewById(R.id.listView);
@@ -37,7 +48,7 @@ public class ProductListPage extends AppCompatActivity {
        int id = getIntent().getIntExtra("id",0);
         if(id == 1) {
             final Cursor data = myDB.getTypeData("Mobile");
-
+            setTitle("Mobile");
             if (data.getCount() == 0) {
                 Toast.makeText(ProductListPage.this, "Mobiles are not available", Toast.LENGTH_LONG).show();
             } else {
@@ -52,6 +63,23 @@ public class ProductListPage extends AppCompatActivity {
                     count++;
 
                 }
+
+                search_products.addTextChangedListener(new TextWatcher() {
+                    @Override
+                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                    }
+
+                    @Override
+                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable editable) {
+
+                    }
+                });
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -66,7 +94,7 @@ public class ProductListPage extends AppCompatActivity {
             }
         } else if(id == 2) {
             Cursor data = myDB.getTypeData("Clothing");
-
+            setTitle("Clothing");
             if (data.getCount() == 0) {
                 Toast.makeText(ProductListPage.this, "Clothing are not available", Toast.LENGTH_LONG).show();
             } else {
@@ -95,7 +123,7 @@ public class ProductListPage extends AppCompatActivity {
             }
         }else if(id == 3) {
             Cursor data = myDB.getTypeData("Cosmetics");
-
+            setTitle("Cosmetics");
             if (data.getCount() == 0) {
                 Toast.makeText(ProductListPage.this, "Cosmetics are not available", Toast.LENGTH_LONG).show();
             } else {
@@ -124,7 +152,7 @@ public class ProductListPage extends AppCompatActivity {
             }
         } else if(id == 4) {
             Cursor data = myDB.getTypeData("Electronics");
-
+            setTitle("Electronics");
             if (data.getCount() == 0) {
                 Toast.makeText(ProductListPage.this, "Electronics are not available", Toast.LENGTH_LONG).show();
             } else {
@@ -153,6 +181,7 @@ public class ProductListPage extends AppCompatActivity {
             }
         } else if(id == 5) {
             Cursor data = myDB.getTypeData("Furniture");
+            setTitle("Furniture");
 
             if (data.getCount() == 0) {
                 Toast.makeText(ProductListPage.this, "Furniture are not available", Toast.LENGTH_LONG).show();
@@ -182,6 +211,7 @@ public class ProductListPage extends AppCompatActivity {
             }
         } else if(id == 6) {
             Cursor data = myDB.getTypeData("Other");
+            setTitle("Other");
 
             if (data.getCount() == 0) {
                 Toast.makeText(ProductListPage.this, "Other are not available", Toast.LENGTH_LONG).show();
@@ -213,4 +243,6 @@ public class ProductListPage extends AppCompatActivity {
             Toast.makeText(ProductListPage.this, "not working", Toast.LENGTH_LONG).show();
         }
     }
+
+
 }

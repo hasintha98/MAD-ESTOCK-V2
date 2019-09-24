@@ -1,8 +1,10 @@
 package com.example.estock;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import android.preference.PreferenceManager;
 import android.view.View;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -20,7 +22,9 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
+import android.os.Bundle;
 
 
     public class MainActivity extends AppCompatActivity
@@ -28,6 +32,7 @@ import android.widget.Toast;
 
         ImageView mobileBtn, ClothingBtn, CosmeticsBtn, ElecBtn, FurnitureBtn, OtherBtn, UserAccountBlueBtn, SearchBlueBtn, HomeBlueBtn;
         ConstraintLayout mobileConstraint;
+        TextView Text_nav_user;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +51,20 @@ import android.widget.Toast;
         UserAccountBlueBtn = (ImageView) findViewById(R.id.Icon_useraccount_blue);
         SearchBlueBtn = (ImageView) findViewById(R.id.Icon_search_blue);
         HomeBlueBtn = (ImageView) findViewById(R.id.Icon_home_blue);
+
+
+        Text_nav_user = (TextView)findViewById(R.id.Text_nav_username);
+
+            SharedPreferences mSharedPreference1 =   PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+//            Text_nav_user.setText(mSharedPreference1.getString(  "username", null));
+//            Text_nav_user.setText(uName);
+//            Bundle extras = getIntent().getExtras();
+//            String username = null;
+//            if(extras != null){
+//                username = extras.getString("UserName");
+//                Text_nav_user.setText(username);
+//            }
+
 
 
             mobileConstraint.setOnClickListener(new View.OnClickListener() {
@@ -241,5 +260,7 @@ import android.widget.Toast;
             drawer.closeDrawer(GravityCompat.START);
             return true;
         }
+
+
     }
 
