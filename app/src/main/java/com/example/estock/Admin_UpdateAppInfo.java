@@ -1,7 +1,6 @@
 package com.example.estock;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -38,11 +37,14 @@ public class Admin_UpdateAppInfo extends AppCompatActivity {
         update = (Button)findViewById(R.id.btn_update);
         add = (Button)findViewById(R.id.button_add);
 
+
+
         Cursor data = mydb.getDataById(1);
         while(data.moveToNext()) {
             aboutUs.setText(data.getString(1));
             contactUs.setText(data.getString(2));
         }
+
 
         AddData();
         UpdateData();
@@ -88,7 +90,7 @@ public class Admin_UpdateAppInfo extends AppCompatActivity {
 
                 if(isUpdated == true) {
                     Toast.makeText(Admin_UpdateAppInfo.this, "You have successfully updated the item", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(Admin_UpdateAppInfo.this, About_Us.class));
+                    startActivity(new Intent(Admin_UpdateAppInfo.this, com.example.estock.App_Info.class));
                 } else {
                     Toast.makeText(Admin_UpdateAppInfo.this, "Data not Updated", Toast.LENGTH_LONG).show();
                 }

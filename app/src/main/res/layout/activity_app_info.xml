@@ -4,53 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".About_Us">
+    tools:context=".App_Info"
+    android:background="@drawable/background3">
+
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textView_contactus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="36dp"
         android:text="Contact Us"
         android:textColor="@color/design_default_color_on_secondary"
         android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView10"
-        app:layout_constraintHorizontal_bias="0.515"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintEnd_toEndOf="@+id/textView_txtAboutus"
+        app:layout_constraintHorizontal_bias="0.601"
+        app:layout_constraintStart_toStartOf="@+id/textView_txtAboutus"
+        app:layout_constraintTop_toBottomOf="@+id/textView_txtAboutus" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView_aboutus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="59dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="About Us"
         android:textColor="@color/design_default_color_on_secondary"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.693"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textView_txtAboutus"
         android:layout_width="317dp"
         android:layout_height="185dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView_aboutus"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@+id/textView_aboutus"
+        app:layout_constraintTop_toBottomOf="@+id/textView_aboutus" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/textView_txtContactus"
         android:layout_width="316dp"
         android:layout_height="219dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView8"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView_contactus"
+        app:layout_constraintHorizontal_bias="0.605"
+        app:layout_constraintStart_toStartOf="@+id/textView_contactus"
+        app:layout_constraintTop_toBottomOf="@+id/textView_contactus" />
 </androidx.constraintlayout.widget.ConstraintLayout>

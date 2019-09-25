@@ -52,6 +52,12 @@ public class DatabaseHelper_UpdateAppInfo extends SQLiteOpenHelper {
 
     }
 
+    public  Cursor getAllData(){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor res = sqLiteDatabase.rawQuery("select * from "+TABLE_NAME,null);
+        return  res;
+    }
+
     public Cursor getDataById(int id) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor res = sqLiteDatabase.rawQuery("select * from "+TABLE_NAME+" where ID = '"+id+"'",null);
