@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,13 +14,13 @@
 
     <TextView
         android:id="@+id/textView_about"
-        android:layout_width="164dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_width="138dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="About Us"
         android:textColor="@color/design_default_color_on_secondary"
         android:textSize="30sp"
@@ -27,12 +33,12 @@
         android:id="@+id/textView_contactus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="52dp"
         android:text="Contact Us"
         android:textColor="@color/design_default_color_on_secondary"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@+id/editText_aboutUs"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="@+id/editText_aboutUs"
         app:layout_constraintTop_toBottomOf="@+id/editText_aboutUs" />
 
@@ -53,12 +59,12 @@
         android:id="@+id/editText_contactUs"
         android:layout_width="310dp"
         android:layout_height="84dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="64dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="@+id/textView_contactus"
-        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="@+id/textView_contactus"
         app:layout_constraintTop_toBottomOf="@+id/textView_contactus" />
 
@@ -66,26 +72,28 @@
         android:id="@+id/btn_update"
         android:layout_width="292dp"
         android:layout_height="57dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginTop="56dp"
         android:background="@color/colorPrimaryDark"
         android:text="Update"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText_contactUs"
         app:layout_constraintHorizontal_bias="0.388"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="529dp" />
+        app:layout_constraintStart_toStartOf="@+id/editText_contactUs"
+        app:layout_constraintTop_toBottomOf="@+id/editText_contactUs" />
 
     <Button
         android:id="@+id/button_add"
         android:layout_width="290dp"
         android:layout_height="69dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="256dp"
         android:background="@color/paymentDone"
         android:text="Add"
         android:textColorHint="@color/design_default_color_on_secondary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btn_update"
-        app:layout_constraintStart_toStartOf="@+id/btn_update" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_update"
+        app:layout_constraintTop_toBottomOf="@+id/btn_update"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

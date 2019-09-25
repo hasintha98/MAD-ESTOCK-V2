@@ -12,13 +12,6 @@
     tools:context="MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/search_products"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp"></androidx.appcompat.widget.SearchView>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mobileConstraint"
         android:layout_width="100dp"
@@ -67,12 +60,12 @@
         android:id="@+id/Layout_clothing"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
         android:background="@drawable/circle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_products">
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <ImageView
@@ -114,10 +107,10 @@
         android:layout_height="100dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/circle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_products">
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <ImageView
@@ -160,6 +153,7 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/circle"
         app:layout_constraintEnd_toEndOf="@+id/Layout_clothing"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/Layout_clothing"
         app:layout_constraintTop_toBottomOf="@+id/Layout_clothing">
 
@@ -438,15 +432,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="235dp"
-        android:layout_height="144dp"
-        android:layout_marginEnd="411dp"
-        android:layout_marginRight="411dp"
-        android:layout_marginBottom="790dp"
-        android:src="@drawable/back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

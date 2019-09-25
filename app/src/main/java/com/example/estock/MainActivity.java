@@ -32,7 +32,9 @@ import android.os.Bundle;
 
         ImageView mobileBtn, ClothingBtn, CosmeticsBtn, ElecBtn, FurnitureBtn, OtherBtn, UserAccountBlueBtn, SearchBlueBtn, HomeBlueBtn;
         ConstraintLayout mobileConstraint;
-        TextView Text_nav_user;
+        TextView Text_nav_user,test_name;
+
+        public static final String MY_PREFS_NAME = "MyPrefsFile";
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -51,13 +53,21 @@ import android.os.Bundle;
         UserAccountBlueBtn = (ImageView) findViewById(R.id.Icon_useraccount_blue);
         SearchBlueBtn = (ImageView) findViewById(R.id.Icon_search_blue);
         HomeBlueBtn = (ImageView) findViewById(R.id.Icon_home_blue);
+        test_name = (TextView) findViewById(R.id.Text_cosmetics);
 
 
         Text_nav_user = (TextView)findViewById(R.id.Text_nav_username);
 
-            SharedPreferences mSharedPreference1 =   PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-//            Text_nav_user.setText(mSharedPreference1.getString(  "username", null));
-//            Text_nav_user.setText(uName);
+            SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+            if(prefs == null) {
+                startActivity(new Intent(MainActivity.this, SignInPageUpdated.class));
+            }
+
+            String Uname = prefs.getString("username", "No name defined");
+         //test_name.setText(Uname);
+
+
+
 //            Bundle extras = getIntent().getExtras();
 //            String username = null;
 //            if(extras != null){
@@ -221,11 +231,7 @@ import android.os.Bundle;
                 Toast.makeText(MainActivity.this, "Sign in ...", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, SignInPageUpdated.class));
                 // Handle the camera action
-            } else if (id == R.id.nav_SignUp) {
-                Toast.makeText(MainActivity.this, "Sign up...", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this, SignUpPage.class));
-
-            } else if (id == R.id.nav_addProducts) {
+            }  else if (id == R.id.nav_addProducts) {
                 Toast.makeText(MainActivity.this, "Selling page...", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, AddProducts.class));
 
@@ -242,18 +248,16 @@ import android.os.Bundle;
                 startActivity(new Intent(MainActivity.this, MainActivity.class));
             } else if (id == R.id.nav_contactUs) {
                 Toast.makeText(MainActivity.this, "Contact us...", Toast.LENGTH_SHORT).show();
-            } else if (id == R.id.nav_notifications) {
-                Toast.makeText(MainActivity.this, "Notifications...", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this, Notification.class));
+            } else if (id == R.id.nav_LogOut) {
+                Toast.makeText(MainActivity.this, "Logging out...", Toast.LENGTH_SHORT).show();
+                SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
+                editor.remove("username");
 
             } else if (id == R.id.nav_aboutUs) {
                 Toast.makeText(MainActivity.this, "About us...", Toast.LENGTH_SHORT).show();
             } else if (id == R.id.nav_myOrders) {
                 Toast.makeText(MainActivity.this, "My orders...", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, OrdersPage.class));
-            } else if (id == R.id.nav_Cart) {
-                Toast.makeText(MainActivity.this, "Shopping cart", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this, Cart.class));
             }
 
             DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -261,6 +265,12 @@ import android.os.Bundle;
             return true;
         }
 
+    public void updateNavHeader() {
+            NavigationView navigationView = (NavigationView)findViewById(R.id.nav_view);
+            View headerView = navigationView.getHeaderView(0);
+            TextView navUsername = headerView.findViewById(R.id.Text_nav_username);
 
+
+        }
     }
 

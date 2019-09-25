@@ -8,15 +8,7 @@
             android:id="@+id/nav_SignIn"
             android:icon="@drawable/ic_account_circle_black_24dp"
             android:title="Sign in" />
-        <item
-            android:id="@+id/nav_SignUp"
-            android:icon="@drawable/ic_account_circle_black_24dp"
-            android:title="Sign up" />
 
-        <item
-            android:id="@+id/nav_Cart"
-            android:icon="@drawable/shoping_cart"
-            android:title="Cart" />
 
         <item
             android:id="@+id/nav_addProducts"
@@ -56,9 +48,9 @@
                 android:title="myAccount" />
 
             <item
-                android:id="@+id/nav_notifications"
-                android:icon="@drawable/notification_large"
-                android:title="Notifications" />
+                android:id="@+id/nav_LogOut"
+                android:icon="@drawable/logout"
+                android:title="Log Out" />
         </menu>
     </item>
 

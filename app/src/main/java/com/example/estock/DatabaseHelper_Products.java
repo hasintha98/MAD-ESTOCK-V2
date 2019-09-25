@@ -20,17 +20,18 @@ public class DatabaseHelper_Products extends SQLiteOpenHelper {
     public static final String COL_5 = "QTY";
     public static final String COL_6 = "PRICE";
     public static final String COL_7 = "DESCRIPTION";
+    public static final String COL_8 = "USERNAME";
 
 
     public DatabaseHelper_Products(Context context) {
-        super(context, DATABASE_NAME, null, 3);
+        super(context, DATABASE_NAME, null, 12);
 
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL("create table "+TABLE_NAME+" (ID INTEGER PRIMARY KEY AUTOINCREMENT,IMAGE BLOB NOT NULL,NAME TEXT NOT NULL,TYPE TEXT NOT NULL,QTY INTEGER NOT NULL,PRICE DOUBLE NOT NULL,DESCRIPTION TEXT NOT NULL)");
+        db.execSQL("create table "+TABLE_NAME+" (ID INTEGER PRIMARY KEY AUTOINCREMENT,IMAGE BLOB NOT NULL,NAME TEXT NOT NULL,TYPE TEXT NOT NULL,QTY INTEGER NOT NULL,PRICE DOUBLE NOT NULL,DESCRIPTION TEXT NOT NULL,USERNAME TEXT NOT NULL)");
 
     }
 
@@ -41,7 +42,7 @@ public class DatabaseHelper_Products extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean insertData(byte[] image, String name, String type, int qty, double price, String desc) {
+    public boolean insertData(byte[] image, String name, String type, int qty, double price, String desc, String username) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_2,image);
@@ -50,6 +51,7 @@ public class DatabaseHelper_Products extends SQLiteOpenHelper {
         contentValues.put(COL_5,qty);
         contentValues.put(COL_6,price);
         contentValues.put(COL_7,desc);
+        contentValues.put(COL_8,username);
         long result = db.insert(TABLE_NAME,null,contentValues);
 
         if(result == -1)
@@ -83,7 +85,13 @@ public class DatabaseHelper_Products extends SQLiteOpenHelper {
         return res;
     }
 
-    public boolean updateData(String Id, byte[] image, String name, String type, int qty, double price, String desc) {
+    public Cursor getDataByUsername(String username) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select * from "+TABLE_NAME+" where USERNAME = '"+username+"'",null);
+        return res;
+    }
+
+    public boolean updateData(String Id, byte[] image, String name, String type, int qty, double price, String desc, String username) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_1,Id);
@@ -93,6 +101,7 @@ public class DatabaseHelper_Products extends SQLiteOpenHelper {
         contentValues.put(COL_5,qty);
         contentValues.put(COL_6,price);
         contentValues.put(COL_7,desc);
+        contentValues.put(COL_8,username);
         db.update(TABLE_NAME,contentValues,"id = ?", new String[] { Id });
         return true;
 

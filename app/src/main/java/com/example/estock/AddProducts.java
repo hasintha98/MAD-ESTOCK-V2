@@ -5,6 +5,7 @@ import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -24,6 +25,7 @@ public class AddProducts extends AppCompatActivity {
     EditText editName,editType,editQty,editdesc,editPrice;
     Spinner spinnerType;
     Button btnAddData;
+    public static final String MY_PREFS_NAME = "MyPrefsFile";
 
     private static final int PICK_IMAGE_REQUEST = 234;
     Bitmap bitmap;
@@ -55,12 +57,12 @@ public class AddProducts extends AppCompatActivity {
 
         myDb = new DatabaseHelper_Products(getApplicationContext());
 
-        productPhoto = (ImageView) findViewById(R.id.addPhoto);
-        editName = (EditText)findViewById(R.id.editText_name);
+        productPhoto = (ImageView) findViewById(R.id.productPhoto);
+        editName = (EditText)findViewById(R.id.Text_name);
         spinnerType = (Spinner) findViewById(R.id.spinner_type);
-        editQty = (EditText)findViewById(R.id.editText_qty);
-        editPrice = (EditText) findViewById(R.id.editText_price);
-        editdesc = (EditText) findViewById(R.id.editText_desc);
+        editQty = (EditText)findViewById(R.id.Text_qty);
+        editPrice = (EditText) findViewById(R.id.Text_price);
+        editdesc = (EditText) findViewById(R.id.Text_desc);
         btnAddData = (Button) findViewById(R.id.button_add);
 
 
@@ -106,7 +108,9 @@ public class AddProducts extends AppCompatActivity {
                 int qty = Integer.parseInt(editQty.getText().toString());
                 double price = Double.parseDouble(editPrice.getText().toString());
                 String productDesc = editdesc.getText().toString();
-                boolean isInserted =  myDb.insertData(myDb.getBytes(bitmap),productName, Type, qty,price,productDesc);
+                SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+                String Uname = prefs.getString("username", "No name defined");
+                boolean isInserted =  myDb.insertData(myDb.getBytes(bitmap),productName, Type, qty,price,productDesc,Uname);
 
                if(isInserted == true) {
                     Toast.makeText(AddProducts.this, "You have successfully sell the item", Toast.LENGTH_LONG).show();

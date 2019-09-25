@@ -24,6 +24,7 @@ public class SignInPageUpdated extends AppCompatActivity {
     Button login;
     private DatabaseHelper_SignUp DatabaseHelper_SignUp;//l
     DatabaseHelper_SignUp myDB;
+    public static final String MY_PREFS_NAME = "MyPrefsFile";
 
 
     @Override
@@ -86,13 +87,12 @@ public class SignInPageUpdated extends AppCompatActivity {
                 boolean isExist = DatabaseHelper_SignUp.checkUserExist(username.getText().toString(), password.getText().toString());
 
                 if(isExist){
-                    SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-                    SharedPreferences.Editor mEdit1 = sp.edit();
-                    mEdit1.putString("UserName",username.getText().toString());
-                    mEdit1.commit();
+                    SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
+                    editor.putString("username", username.getText().toString());
+                    editor.apply();
                     Intent intent = new Intent(SignInPageUpdated.this, MainActivity.class);
                     startActivity(intent);
-                    Toast.makeText(SignInPageUpdated.this, "Success", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignInPageUpdated.this, "You have successfully sign in", Toast.LENGTH_SHORT).show();
 
                 } else if(username.getText().toString().equals("123") && password.getText().toString().equals("123")) {
                     Intent intent = new Intent(SignInPageUpdated.this, Admin.class);
