@@ -17,7 +17,7 @@ public class DatabaseHelper_MyOrders extends SQLiteOpenHelper {
 
     public DatabaseHelper_MyOrders(Context context) {
 
-        super(context,DATABASE_NAME,null,10);
+        super(context,DATABASE_NAME,null,12);
     }
 
     @Override

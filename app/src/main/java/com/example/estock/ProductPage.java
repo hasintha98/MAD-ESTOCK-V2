@@ -38,6 +38,7 @@ public class ProductPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_page);
         myDB = new DatabaseHelper_Products(this);
+        mydb = new DatabaseHelper_MyOrders(this);
 
 
         ImageView imageView_productImage = findViewById(R.id.ImageView_productImage);
@@ -82,6 +83,7 @@ public class ProductPage extends AppCompatActivity {
             Text_Product_ProductName.setText(data.getString(2));
             Text_Product_ProductId.setText(data.getString(0));
             Text_Product_Price.setText(data.getString(5));
+
             Text_Product_username.setText(data.getString(7));
             Text_Product_Price2.setText(data.getString(5));
             Text_Product_Description.setText(data.getString(6));
@@ -109,7 +111,7 @@ public class ProductPage extends AppCompatActivity {
 
                                 if (isInserted == true) {
                                     Toast.makeText(ProductPage.this, "Data inserted", Toast.LENGTH_LONG).show();
-                                    // startActivity(new Intent(ProductPage.this, paymentPage.class));
+                                    startActivity(new Intent(ProductPage.this, paymentPage.class));
                                 } else
                                     Toast.makeText(ProductPage.this, "Data not inserted", Toast.LENGTH_LONG).show();
 

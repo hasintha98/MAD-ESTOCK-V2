@@ -24,7 +24,7 @@ public class DatabaseHelper_Products extends SQLiteOpenHelper {
 
 
     public DatabaseHelper_Products(Context context) {
-        super(context, DATABASE_NAME, null, 11);
+        super(context, DATABASE_NAME, null, 12);
 
     }
 

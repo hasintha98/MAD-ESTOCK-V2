@@ -54,6 +54,8 @@ public class Admin_DeleteProducts extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin__delete_products);
 
+        myDb = new DatabaseHelper_Products(this);
+
         btnDelete = findViewById(R.id.btnDelete);
         productPhoto = (ImageView) findViewById(R.id.productPhoto);
         Text_id = (TextView) findViewById(R.id.Text_id);
